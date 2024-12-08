@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    padding: 40px;
+    background: #818181;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.algorithms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.algorithm-card {
+    aspect-ratio: 1;
+    background: #e6f3ff;
+    padding: 20px;
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.algorithm-card h2 {
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.algorithm-card p {
+    color: #000000;
+}
+
+.start-button {
+    margin-top: 20px;
+    padding: 8px 24px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
