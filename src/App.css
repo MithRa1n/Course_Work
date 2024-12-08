@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.graph-container {
+    padding: 20px;
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.graph-management {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+button {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    background: #2a2a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+button:disabled {
+    background: #1a1a1a;
+    color: #666;
+    border-color: #333;
+    cursor: not-allowed;
+}
+
+input,
+select {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+}
+
+table {
+    background: rgba(10, 10, 10, 0.9);
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+th {
+    background: rgba(20, 20, 20, 0.9);
+    color: #ffd700;
+    padding: 12px;
+}
+
+td {
+    border-bottom: 1px solid #333;
+    padding: 12px;
+    color: #fff;
+}
+
+h3 {
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.app {
+    min-height: 100vh;
+    background: #1a1b26;
+    color: #fff;
+    padding: 20px;
+}
+
+.app-header {
+    background: #2d3748;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    color: #ffd700;
+    margin: 0;
+}
+
+.github-link {
+    color: #ffd700;
+}
+
+.github-link:hover {
+    color: #ffa500;
+}

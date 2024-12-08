@@ -1,0 +1,72 @@
+.node-section {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header h3 {
+    margin: 0;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.node-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.node-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: relative;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 80px;
+    max-width: calc(100% / 15);
+}
+
+.node-info {
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+.add-button,
+.delete-button {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background: #f44336;
+    color: #ffffff;
+    padding: 2px 6px;
+    margin-left: 4px;
+}
+
+.add-button:disabled,
+.delete-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

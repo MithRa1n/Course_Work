@@ -1,0 +1,22 @@
+.step {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+.step.current {
+    background: #2a2a2a;
+    border-color: #ffd700;
+}
+
+.step-number {
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.step-content {
+    color: white;
+}
