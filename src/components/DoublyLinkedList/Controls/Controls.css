@@ -1,0 +1,72 @@
+.controls {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.operation-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.operation-button {
+    flex: 1;
+    padding: 8px 16px;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.operation-button.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.operation-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.insert-controls,
+.search-controls {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.control-button.home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.control-button.home:hover {
+    background: #333333;
+}
+
+.icon {
+    font-size: 1.2em;
+}

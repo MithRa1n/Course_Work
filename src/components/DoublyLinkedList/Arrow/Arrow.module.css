@@ -1,0 +1,27 @@
+.arrow {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.prev::before {
+    content: '←';
+}
+
+.next::before {
+    content: '→';
+}
+
+.active {
+    color: #4CAF50;
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
