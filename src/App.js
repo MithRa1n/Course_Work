@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import { DoublyLinkedList } from './components/DoublyLinkedList/DoublyLinkedList/DoublyLinkedList';
-import DijkstraGraphVisualition from './components/Graph&Algorithm/DijkstraGraphVisualition/DijkstraGraphVisualition';
+import DijkstraGraphVisualition from './components/GraphAlgorithm/DijkstraGraphVisualition/DijkstraGraphVisualition';
 function App() {
   return (
     <Routes>

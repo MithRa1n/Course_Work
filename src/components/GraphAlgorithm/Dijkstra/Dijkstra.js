@@ -1,8 +1,10 @@
+import { PriorityQueue } from './PriorityQueue';
+
 export const dijkstra = (nodes, edges, start) => {
     const steps = [];
     const distances = {};
     const previous = {};
-    const unvisited = new Set(nodes.map(node => node.id));
+    const priorityQueue = new PriorityQueue();
     const visited = new Set();
 
     nodes.forEach(node => {
@@ -10,6 +12,7 @@ export const dijkstra = (nodes, edges, start) => {
         previous[node.id] = null;
     });
     distances[start] = 0;
+    priorityQueue.enqueue(start, 0);
 
     steps.push({
         distances: { ...distances },
@@ -19,31 +22,12 @@ export const dijkstra = (nodes, edges, start) => {
         message: `Initialization: distance to ${start} = 0`
     });
 
-    while (unvisited.size > 0) {
-        let current = null;
-        let minDistance = Infinity;
+    while (!priorityQueue.isEmpty()) {
+        const current = priorityQueue.dequeue();
 
-        for (let nodeId of unvisited) {
-            if (distances[nodeId] < minDistance) {
-                minDistance = distances[nodeId];
-                current = nodeId;
-            }
-        }
-
-        if (current === null || distances[current] === Infinity) {
-            steps.push({
-                distances: { ...distances },
-                previous: { ...previous },
-                current: null,
-                visited: new Set(visited),
-                message: `The algorithm is complete. Unreachable peaks remain.`
-            });
-            break;
-        }
-
-        unvisited.delete(current);
+        if (visited.has(current)) continue;
+        
         visited.add(current);
-
         steps.push({
             distances: { ...distances },
             previous: { ...previous },
@@ -72,6 +56,7 @@ export const dijkstra = (nodes, edges, start) => {
             if (totalDistance < distances[neighbor]) {
                 distances[neighbor] = totalDistance;
                 previous[neighbor] = current;
+                priorityQueue.enqueue(neighbor, totalDistance);
 
                 steps.push({
                     distances: { ...distances },

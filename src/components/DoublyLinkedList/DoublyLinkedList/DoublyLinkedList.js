@@ -26,17 +26,13 @@ export const DoublyLinkedList = () => {
             try {
                 setIsTraversing(true);
                 const newNodeValue = parseInt(newValue);
-
                 const tailIndex = nodes.length - 1;
                 setCurrentTraversal(tailIndex);
                 await new Promise(resolve => setTimeout(resolve, 500));
-
                 await animateLinks(tailIndex, nodes.length, 'next');
                 await animateLinks(nodes.length, tailIndex, 'prev');
-
                 setNodes(prev => [...prev, newNodeValue]);
                 setNewValue('');
-
                 setCurrentTraversal(nodes.length);
                 await new Promise(resolve => setTimeout(resolve, 500));
             } finally {
@@ -51,13 +47,10 @@ export const DoublyLinkedList = () => {
             try {
                 setIsTraversing(true);
                 const newNodeValue = parseInt(newValue);
-
                 setCurrentTraversal(0);
                 await new Promise(resolve => setTimeout(resolve, 500));
-
                 await animateLinks(0, -1, 'next');
                 await animateLinks(-1, 0, 'prev');
-
                 setNodes([newNodeValue, ...nodes]);
                 setNewValue('');
             } finally {
@@ -72,27 +65,18 @@ export const DoublyLinkedList = () => {
             setIsTraversing(true);
 
             try {
-
                 setCurrentTraversal(index);
                 await new Promise(resolve => setTimeout(resolve, 500));
-
                 if (index === 0) {
-
                     if (nodes.length > 1) {
-
                         await animateLinks(0, 1, 'prev');
                         await new Promise(resolve => setTimeout(resolve, 500));
-
-
                         setCurrentTraversal(1);
                         await animateLinks(1, -1, 'prev');
                     }
                 } else if (index === nodes.length - 1) {
-
                     await animateLinks(index - 1, index, 'next');
                     await new Promise(resolve => setTimeout(resolve, 500));
-
-
                     setCurrentTraversal(index - 1);
                     await animateLinks(index - 1, -1, 'next');
                 } else {
@@ -100,7 +84,6 @@ export const DoublyLinkedList = () => {
                     await animateLinks(index - 1, index, 'next');
                     await new Promise(resolve => setTimeout(resolve, 500));
                     await animateLinks(index - 1, index + 1, 'next');
-
                     await animateLinks(index + 1, index, 'prev');
                     await new Promise(resolve => setTimeout(resolve, 500));
                     await animateLinks(index + 1, index - 1, 'prev');
@@ -108,7 +91,6 @@ export const DoublyLinkedList = () => {
 
                 setHighlightedIndex(index);
                 await new Promise(resolve => setTimeout(resolve, 500));
-
                 setNodes(prevNodes => prevNodes.filter((_, i) => i !== index));
 
                 await new Promise(resolve => setTimeout(resolve, 500));
@@ -125,12 +107,10 @@ export const DoublyLinkedList = () => {
             setIsTraversing(true);
             try {
                 let nodesToDelete = [];
-
                 if (searchDirection === 'start') {
                     for (let i = 0; i < nodes.length; i++) {
                         setCurrentTraversal(i);
                         await new Promise(resolve => setTimeout(resolve, 500));
-
                         if (nodes[i] === value) {
                             nodesToDelete.push(i);
                             if (deleteMode === 'first') break;
@@ -140,7 +120,6 @@ export const DoublyLinkedList = () => {
                     for (let i = nodes.length - 1; i >= 0; i--) {
                         setCurrentTraversal(i);
                         await new Promise(resolve => setTimeout(resolve, 500));
-
                         if (nodes[i] === value) {
                             nodesToDelete.push(i);
                             if (deleteMode === 'first') break;
@@ -175,7 +154,6 @@ export const DoublyLinkedList = () => {
                     for (let i = 0; i < nodes.length && !found; i++) {
                         setCurrentTraversal(i);
                         await new Promise(resolve => setTimeout(resolve, 500));
-
                         if (nodes[i] === searchNum) {
                             setHighlightedIndex(i);
                             found = true;
@@ -185,7 +163,6 @@ export const DoublyLinkedList = () => {
                     for (let i = nodes.length - 1; i >= 0 && !found; i--) {
                         setCurrentTraversal(i);
                         await new Promise(resolve => setTimeout(resolve, 500));
-
                         if (nodes[i] === searchNum) {
                             setHighlightedIndex(i);
                             found = true;
